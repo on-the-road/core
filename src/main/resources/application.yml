@@ -1,0 +1,12 @@
+spring:
+  mvc:
+      view:
+        prefix: "/WEB-INF/view/"
+        suffix: ".jsp"
+
+  # Stream - Rabbitmq-binder相关配置
+#  cloud:
+#    stream:
+#      bindings:
+#        input:
+#          destinations: myRabbitmq

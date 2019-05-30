@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <configuration>
+        <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>%-20(%date{yyyy-MM-dd HH:mm:ss} 【study-core】[%thread] [%method]) %-5level %logger{0} - %msg%n</pattern>
+            </layout>
+        </appender>
+
+    <root level="info">
+             <appender-ref ref="consoleLog"/>
+           </root>
+     </configuration>
