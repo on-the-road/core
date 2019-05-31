@@ -1,4 +1,4 @@
-package com.example.core.test;
+package com.example.core.netty;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;

@@ -1,5 +1,7 @@
 package com.example.core.algorithem;
 
+import java.util.Arrays;
+
 /**
  * -描述- 堆排序,非稳定排序，时间复杂度稳定在O(nlogn),空间复杂度O(1)
  * 这里说明一下：快速排序是平均复杂O (nlogn)
@@ -11,6 +13,14 @@ package com.example.core.algorithem;
  *      不过下沉的顺序不是从根节点开始下沉，而是从下面的非叶子节点下沉
  *  注 -- 数组实现的堆中，第N个节点的左孩子的索引值是(2N+1)，右孩子的索引是(2N+2)
  *        索引为N的节点，其父节点的索引为 floor( (N-1)/2 )
+ *
+ *   二叉堆的构建过程 --
+ *      给定一个数组直接按顺序排成二叉树
+ *      调整--从最后的非叶子节点开始调整
+ *   二叉堆的插入过程
+ *  1.把要插入的节点放在二叉堆的最末端
+ *  2.把这个元素和它的父节点进行比较，如果符合条件或者该节点已是头结点插入操作就算完成了
+ *  3.如果不符合条件的话就交换该节点和父节点位置。并跳到第二步
  */
 public class HeapSort {
     /**
@@ -31,6 +41,7 @@ public class HeapSort {
             max_heap_down(a,i,(n - 1));
         }
 
+        System.out.println("构建的大根堆：" + Arrays.toString(a));
         //从最后一个元素开始对序列进行调整，不断的缩小调整的范围直到第一个元素
         //每次窃取最大堆的堆顶元素，放到数组的末尾，把窃取之后的堆再次调整为最大堆
         for(int i = n - 1; i > 0; i--){
@@ -80,6 +91,7 @@ public class HeapSort {
             //最小堆下沉,从(n/2-1) --> 0逐次遍历,每次遍历的都是父节点
             min_heap_down(a,i,n-1);
         }
+        System.out.println("构建的小根堆:" + Arrays.toString(a));
         //从最后一个元素开始对序列进行调整，不断的缩小调整的范围直到第一个元素
         //每次窃取最小堆的堆顶元素，放到数组的末尾，把窃取之后的堆再次调整为最小堆
         for(int i = n - 1; i > 0; i--){
@@ -118,7 +130,8 @@ public class HeapSort {
     }
 
     public static void main(String[] args) {
-        int a[] = {20,30,90,40,70,110,60,10,100,50,80};
+        //int a[] = {1,8,6,2,5,4,7,3};
+        int a[] = {5,11,7,2,3,17};
         HeapSort hs = new HeapSort();
         System.out.println("before-sort:");
         for (int i = 0; i < a.length; i++){
@@ -126,7 +139,7 @@ public class HeapSort {
         }
         System.out.println();
         //hs.heap_sort_asc(a,a.length);
-        hs.heap_sort_desc(a,a.length);
+        hs.heap_sort_asc(a,a.length);
         System.out.println("");
         System.out.println("after-sort:");
         for(int i = 0; i < a.length; i++){

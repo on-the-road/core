@@ -1,4 +1,4 @@
-package com.example.core.test;
+package com.example.core.netty;
 
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;

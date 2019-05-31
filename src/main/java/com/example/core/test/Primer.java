@@ -13,6 +13,7 @@ public class Primer {
     }
 
     public static void main(String[] args) {
+        System.out.println("系统换行符：" + System.getProperty("line.separator"));
         String str = new String("str-beging-");
         System.out.println("outer-before-operate:" + str);
         changeStr(str);
