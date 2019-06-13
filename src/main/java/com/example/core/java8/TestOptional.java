@@ -1,4 +1,4 @@
-package com.example.core.Optional;
+package com.example.core.java8;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -64,8 +64,9 @@ public class TestOptional {
         Map<String,Map<String,Object>> wrapper = new HashMap<>();
         wrapper.put("k",map);
 
-        TestOptional to = new TestOptional(wrapper);
-        to.optionA();
+        //TestOptional to = new TestOptional(wrapper);
+        TestOptional to = new TestOptional(null);
+        //to.optionA();
         to.optionB();
 
         System.out.println("Integer-最小值：" + Integer.MIN_VALUE);
