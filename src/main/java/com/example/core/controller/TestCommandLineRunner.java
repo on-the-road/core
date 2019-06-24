@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Order(value = 1)
-public class TestCommandLineRunner  implements CommandLineRunner{
+public class TestCommandLineRunner  implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
         System.out.println("------------------这是第一个我要预先加载的资源类....");

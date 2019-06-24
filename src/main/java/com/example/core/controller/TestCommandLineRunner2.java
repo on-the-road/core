@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Order(value = 2)
-public class TestCommandLineRunner2  implements CommandLineRunner{
+public class TestCommandLineRunner2  implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
         System.out.println("----------这是第二个我要预先加载的资源类....");

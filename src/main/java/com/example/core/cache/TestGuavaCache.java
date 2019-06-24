@@ -90,6 +90,7 @@ public class TestGuavaCache {
         System.out.println("打印统计信息：" + cache.stats());
     }*/
 }
+
 class inner{
 
     private static Cache cache = CacheBuilder.newBuilder().maximumSize(3).build();

@@ -11,6 +11,7 @@ public class SuperClass {
         System.out.println("Super init!");
     }
 }
+
 class SubClass {
     static {
         System.out.println("Sub init!");

@@ -35,6 +35,7 @@ public class StreamFlatMap {
     }
 
 }
+
 class Foo {
     String name;
     List<Bar> bars = new ArrayList<>();

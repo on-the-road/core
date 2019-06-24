@@ -93,7 +93,7 @@ public class AVLTree<T extends Comparable<T>> {
      * 返回值：
      *     根节点
      */
-    private TreeNode<T> insert(TreeNode<T> tree,T data){
+    private TreeNode<T> insert(TreeNode<T> tree, T data){
         if(tree == null){
             //新建节点
             tree = new TreeNode<T>(data,null,null);
@@ -144,7 +144,7 @@ public class AVLTree<T extends Comparable<T>> {
      * 返回值：
      *     根节点
      */
-    private TreeNode<T> delete(TreeNode<T> tree,TreeNode<T> node){
+    private TreeNode<T> delete(TreeNode<T> tree, TreeNode<T> node){
         //如果根为空，或没有要删除的节点,返回null
         if(tree == null || node == null){
             return null;
@@ -269,13 +269,14 @@ public class AVLTree<T extends Comparable<T>> {
 
 
 }
+
 class TreeNode<T extends Comparable<T>>{
     T data;
     TreeNode<T> left; //左孩子
     TreeNode<T> right; //右孩子
     int height; //记录节点的高度,空的二叉树的高度是0
 
-    public TreeNode(T data,TreeNode<T> left,TreeNode<T> right){
+    public TreeNode(T data, TreeNode<T> left, TreeNode<T> right){
         this.left = left;
         this.right = right;
         this.data = data;

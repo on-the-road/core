@@ -40,7 +40,7 @@ public class MyGraph {
      * 深度优先遍历
      */
 
-    public void dfs(MyGraph graph,int start,boolean[] visited){
+    public void dfs(MyGraph graph, int start, boolean[] visited){
         System.out.println("起始位置：" + graph.vertexes[start].data);
         visited[start] = true;
         //todo 循环start顶点所对应的链表,链表中存放的是该顶点可以直接到达的其他顶点
@@ -55,7 +55,7 @@ public class MyGraph {
     /**
      * 广度优先遍历
      */
-    public void bfs(MyGraph graph,int start,boolean[] visited,LinkedList<Integer> queue){
+    public void bfs(MyGraph graph, int start, boolean[] visited, LinkedList<Integer> queue){
         //todo linkedList.offer -- 默认tail尾部添加元素
         queue.offer(start);
         while (!queue.isEmpty()){

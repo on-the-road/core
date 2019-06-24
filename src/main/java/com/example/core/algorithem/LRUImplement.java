@@ -11,7 +11,7 @@ public class LRUImplement {
     private Node end;
     private int limit; //缓存存储上线
 
-    private final HashMap<String,Node> hashMap; //缓存容器
+    private final HashMap<String, Node> hashMap; //缓存容器
 
     /**
      * 初始化

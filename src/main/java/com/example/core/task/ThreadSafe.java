@@ -18,7 +18,7 @@ public class ThreadSafe {
     }
 
     public static void main(String[] args) {
-        final  ThreadSafe ts = new ThreadSafe();
+        final ThreadSafe ts = new ThreadSafe();
         Executor executor = Executors.newFixedThreadPool(10);
         for(int i = 0; i < 1000; i++){
             executor.execute(new Runnable() {

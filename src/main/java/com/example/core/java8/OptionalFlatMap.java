@@ -27,13 +27,16 @@ public class OptionalFlatMap {
         //todo 说实话 个人感觉没有上面的if判断简洁，虽然优雅...
     }
 }
+
 class Outer {
     //todo 嵌套的
     Nested nested;
 }
+
 class Nested {
     Inner inner;
 }
+
 class Inner {
     String foo;
 }

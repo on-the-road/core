@@ -23,7 +23,7 @@ public class BinarySearchNode {
      * @param iDate
      * @param root
      */
-    public void insert(int iDate,BinarySearchNode root){ //插入新的节点
+    public void insert(int iDate, BinarySearchNode root){ //插入新的节点
         BinarySearchNode node = new BinarySearchNode(iDate);
         if(root == null){ //树为空，把第一个节点置为根节点
             root = node;

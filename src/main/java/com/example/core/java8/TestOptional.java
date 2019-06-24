@@ -3,6 +3,7 @@ package com.example.core.java8;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.TimeZone;
 
 /**
  * @Author wangwei
@@ -65,9 +66,9 @@ public class TestOptional {
         wrapper.put("k",map);
 
         //TestOptional to = new TestOptional(wrapper);
-        TestOptional to = new TestOptional(null);
+        //TestOptional to = new TestOptional(null);
         //to.optionA();
-        to.optionB();
+        //to.optionB();
 
         System.out.println("Integer-最小值：" + Integer.MIN_VALUE);
         System.out.println("Integer-最小值的绝对值：" + Math.abs(Integer.MIN_VALUE));
@@ -82,7 +83,7 @@ public class TestOptional {
 
         // i + 1 = i  Double.NaN
 
-
+        System.out.println(TimeZone.getDefault());
 
 
 
