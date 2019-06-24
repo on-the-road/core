@@ -1,5 +1,7 @@
 package com.example.core.task;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.params.SetParams;
+
 import java.util.Collections;
 
 /**
@@ -32,7 +34,7 @@ public class RedisSingleLock {
             expx -- SET_WITH_EXPIRE_TIME -- 给该key加一个过期时间
             time -- 过期时间，与expx相呼应
          */
-        String result = jedis.set(lockKey,lockValue,"NX","EX",expireTime);
+        String result = jedis.set(lockKey,lockValue,SetParams.setParams().nx().ex(expireTime));
         if("OK".equals(result)){
             return true;
         }
