@@ -6,7 +6,7 @@ package com.example.core.algorithem;
  * -描述- 链表逆序
  * -就地反转发
  * -思路：把当前链表的下一个节点插入到头结点dummy的下一个节点中，就地反转
- * - 写正确，真的不简单
+ * -      写正确，真的不简单
  *
  */
 public class LinkReverse {

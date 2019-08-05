@@ -1,5 +1,8 @@
 package com.example.core.algorithem;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Author wangwei
  * @Date 2019/6/17 14:40
@@ -7,11 +10,24 @@ package com.example.core.algorithem;
  */
 public class SmartAlgor {
     public static void main(String[] args) {
-        //todo  & 运算符 判断一个正整数是否是2的幂次方
-        //todo 如果一个数n是2的幂次方，意味着这个n的二进制表示中，只有一个位是1，其他都是零
-        //todo  2^0 = 0001   2^1 = 0010  2^2 = 0100  2^3 = 1000
-        //todo 所以呢，我们只需要判断N中的二进制表示法中是否只存在一个 1 就可以了
-        int n = 8;
-        System.out.println(n & (n - 1));
+       String s = "acca";
+       int count = lengthOfLongestSubstring(s);
+        System.out.println("最长的子串长度是:" + count);
+    }
+
+    //todo 滑动窗口 思路
+    public static int lengthOfLongestSubstring(String s) {
+        int n = s.length(), max = 0;
+        Map<Character,Integer> map = new HashMap<>();
+        for(int end=0,start=0; end<n; end++){
+            char tar = s.charAt(end);
+            if(map.containsKey(tar)){
+                start = Math.max(start,map.get(tar));
+            }
+            max = Math.max(max,end-start+1);
+            //todo 加1表示从字符位置后一个才开始不重复,不理解
+            map.put(tar,end + 1);
+        }
+        return max;
     }
 }

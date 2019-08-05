@@ -1,10 +1,12 @@
 package com.example.core.test;
 
 import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
 import java.time.temporal.TemporalField;
 import java.time.temporal.WeekFields;
+import java.util.Date;
 import java.util.Locale;
 
 /**
@@ -24,5 +26,11 @@ public class LocalDateTest {
 
         TemporalField fieldUS = WeekFields.of(Locale.CHINA).dayOfWeek();
         System.out.println(now.with(fieldUS, 2)); // 2015-02-08 (Sunday)
+
+        System.out.println("***************************************");
+        //传统获取时间戳
+        System.out.println("old-time:" + new Date().getTime());
+        //java 获取时间戳
+        System.out.println("new-time:" + LocalDateTime.now().toInstant(ZoneOffset.of("+8")).toEpochMilli());
     }
 }

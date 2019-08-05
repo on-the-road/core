@@ -147,7 +147,7 @@ public class Sort {
     // 递归实现方式
     public int fibonacci(int n) {
         if (n <= 2) {
-            return 1;
+            return n;
         } else {
             return fibonacci(n - 2) + fibonacci(n - 1);
         }
@@ -156,9 +156,9 @@ public class Sort {
     // 递推实现方式
     public static int fibonacciNormal(int n) {
         if (n <= 2) {
-            return 1;
+            return n;
         }
-        int n1 = 1, n2 = 1, sn = 0;
+        int n1 = 1, n2 = 2, sn = 0;
         for (int i = 0; i < n - 2; i++) {
             sn = n1 + n2;
             n1 = n2;
